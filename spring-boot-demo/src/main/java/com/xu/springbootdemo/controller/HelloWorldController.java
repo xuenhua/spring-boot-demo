@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.xu.springbootdemo.annotation.TestAnnotation;
 import com.xu.springbootdemo.entity.TestDB_getUsername;
 
 /**
@@ -25,6 +26,7 @@ public class HelloWorldController {
 	private TestDB_getUsername test;
 
 	@RequestMapping("/hello1")
+	@TestAnnotation(name="aspect hello1")
 	public String hello1() {
 		return "Hello World";
 	}
